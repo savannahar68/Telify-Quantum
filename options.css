@@ -1,0 +1,59 @@
+body {
+}
+
+table {
+	width: 100%;
+}
+
+tr.custom {
+}
+
+td {
+}
+
+td.col2 {
+	text-align: right;
+}
+
+select, input {
+	width: 10em;
+}
+
+input#template, textarea#example, select#custom_opentype {
+	width: 100%;
+}
+
+input#template[disabled], textarea#example {
+	color: black;
+	background-color: white;
+}
+
+textarea#example {
+	color: #888;
+	background-color: #f0f0ff;
+	resize: none;
+}
+
+input.tmpl_arg {
+	width: 100%;
+}
+
+select {
+}
+
+option {
+}
+
+td#buttonpane {
+	text-align: right;
+	white-space: nowrap;
+}
+
+#statuspane, #buttonpane {
+	padding-top: 8px;
+}
+
+#status {
+font-weight:bold;
+}
+

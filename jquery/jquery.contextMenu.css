@@ -1,0 +1,269 @@
+@charset "UTF-8";
+/*!
+ * jQuery contextMenu - Plugin for simple contextMenu handling
+ *
+ * Version: v2.2.4-dev
+ *
+ * Authors: Björn Brala (SWIS.nl), Rodney Rehm, Addy Osmani (patches for FF)
+ * Web: http://swisnl.github.io/jQuery-contextMenu/
+ *
+ * Copyright (c) 2011-2016 SWIS BV and contributors
+ *
+ * Licensed under
+ *   MIT License http://www.opensource.org/licenses/mit-license
+ *
+ * Date: 2016-07-17T19:45:35.350Z
+ */
+
+
+div#context-menu-layer {
+	font-size: 1em;
+}
+
+.telifyContextMenu * {
+	box-sizing: content-box;
+	-webkit-text-size-adjust: none;
+}
+
+.telifyContextMenu .context-menu-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2em;
+  font-family: "context-menu-icons";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  color: #2980b9;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.telifyContextMenu .context-menu-icon.context-menu-hover:before {
+  color: #fff;
+}
+
+.telifyContextMenu .context-menu-icon.context-menu-disabled::before {
+  color: #bbb;
+}
+
+.telifyContextMenu .context-menu-icon.context-menu-icon--fa {
+  display: list-item;
+}
+
+.telifyContextMenu .context-menu-icon.context-menu-icon--fa::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2em;
+  font-family: FontAwesome;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  color: #2980b9;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.telifyContextMenu .context-menu-icon.context-menu-icon--fa.context-menu-hover:before {
+  color: #fff;
+}
+
+.telifyContextMenu .context-menu-icon.context-menu-icon--fa.context-menu-disabled::before {
+  color: #bbb;
+}
+
+html ul.telifyContextMenu, html ul.context-menu-list {
+  position: absolute;
+  display: inline-block;
+  min-width: 13em;
+  max-width: 26em;
+  padding: .25em 0 .4em 0;
+  margin: .3em;
+  font-family: inherit;
+  //font-size: inherit;
+  font-size: 15px;
+  list-style-type: none;
+  background: #fff;
+  border: 1px solid #bebebe;
+  border-radius: .2em;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.telifyContextMenu li.context-menu-item {
+  position: relative;
+  padding: .2em 1.5em .2em 2.7em;
+  margin: 0;
+  color: #2f2f2f;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff;
+  list-style: none;
+  line-height: 20px;
+ 	font-family: sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+}
+
+.telifyContextMenu li.context-menu-item span {
+  background-color: #fff;
+  line-height: 20px;
+}
+
+.telifyContextMenu [class*="icon-"] {
+	width: auto;
+	height: 20px;
+	display: list-item;
+}
+
+.telifyContextMenu li.context-menu-item::before {
+	content: none;
+	margin: 0;
+	padding: 0;
+}
+
+.telifyContextMenu .context-menu-separator {
+  padding: 0;
+  margin: .35em 0;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.context-menu-item > label > input,
+.context-menu-item > label > textarea {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.telifyContextMenu .context-menu-item.context-menu-hover {
+  color: #000000;
+  cursor: default;
+  background-color: #f0f0f0;
+}
+
+.telifyContextMenu .context-menu-item.context-menu-disabled {
+  color: #bbb;
+  cursor: default;
+  background-color: #fff;
+}
+
+.telifyContextMenu .context-menu-input.context-menu-hover {
+  cursor: default;
+}
+
+.telifyContextMenu .context-menu-submenu:after {
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  content: '';
+  border-color: transparent transparent transparent #2f2f2f;
+  border-style: solid;
+  border-width: .25em 0 .25em .25em;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/**
+ * Inputs
+ */
+.telifyContextMenu .context-menu-item.context-menu-input {
+  padding: .3em .6em;
+}
+
+/* vertically align inside labels */
+.telifyContextMenu .context-menu-input > label > * {
+  vertical-align: top;
+}
+
+/* position checkboxes and radios as icons */
+.telifyContextMenu .context-menu-input > label > input[type="checkbox"],
+.telifyContextMenu .context-menu-input > label > input[type="radio"] {
+  position: relative;
+  top: .12em;
+  margin-right: .4em;
+}
+
+.telifyContextMenu .context-menu-input > label {
+  margin: 0;
+}
+
+.telifyContextMenu .context-menu-input > label,
+.telifyContextMenu .context-menu-input > label > input[type="text"],
+.telifyContextMenu .context-menu-input > label > textarea,
+.telifyContextMenu .context-menu-input > label > select {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.telifyContextMenu .context-menu-input > label > textarea {
+  height: 7em;
+}
+
+.telifyContextMenu .context-menu-item > .context-menu-list {
+  top: .3em;
+  /* re-positioned by js */
+  right: -.3em;
+  display: none;
+}
+
+.telifyContextMenu .context-menu-item.context-menu-visible > .context-menu-list {
+  display: block;
+}
+
+.telifyContextMenu .context-menu-accesskey {
+  text-decoration: underline;
+}
+
+.telifyContextMenu .context-menu-icon {
+  min-height: 15px;
+  background-repeat: no-repeat;
+  background-position: 0.5em 4px;
+}
+
+.telifyContextMenu .context-menu-item a, .context-menu-item span {
+	text-decoration: none;
+	color: #1a0dab;
+	font-family: sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	font-style: normal;
+	cursor: pointer;
+}
+
+.telifyContextMenu .context-menu-item a:hover {
+	text-decoration: none;
+	color: #3a2dcb !important;
+}
+
+.telifyContextMenu .context-menu-icon-edit {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/edit.png");
+}
+

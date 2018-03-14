@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telify Options</title>
+  <link href="options.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="jquery/jquery-3.1.0.min.js"></script>
+</head>
+
+<body>
+
+	<table>
+
+		<tr>
+			<td>Used protocol:</td>
+			<td class="col2">
+				<select id="hreftype">
+					<optgroup label="Protocols">
+						<option value="0">tel:</option>
+						<option value="1">callto:</option>
+						<option value="2">skype:</option>
+						<option value="3">sip:</option>
+						<option value="4">phone:</option>
+						<option value="5">tksuite:</option>
+					</optgroup>
+					<optgroup label="Templates">
+						<option value="100">snom phone</option>
+						<option value="101">CPBX</option>
+						<option value="199">User defined</option>
+					</optgroup>
+				</select>
+			</td>
+		</tr>
+
+		<tr class="custom">
+			<td colspan=2>
+				<input id="template" type="text" placeholder="Insert template">
+			</td>
+		</tr>
+
+		<tr class="custom">
+			<td colspan=2>
+				<textarea id="example" type="text" disabled></textarea>
+			</td>
+		</tr>
+
+		<tr class="custom">
+			<td id="tmpl_label1">Template argument #1:</td>
+			<td class="col2">
+				<input id="tmpl_arg1" class="tmpl_arg" type="text" placeholder="Replaces $1 in template">
+			</td>
+		</tr>
+
+		<tr class="custom">
+			<td id="tmpl_label2">Template argument #1:</td>
+			<td class="col2">
+				<input id="tmpl_arg2" class="tmpl_arg" type="text" placeholder="Replaces $2 in template">
+			</td>
+		</tr>
+
+		<tr class="custom">
+			<td id="tmpl_label3">Template argument #1:</td>
+			<td class="col2">
+				<input id="tmpl_arg3" class="tmpl_arg" type="text" placeholder="Replaces $3 in template">
+			</td>
+		</tr>
+
+		<tr class="custom">
+			<td>Open http links</td>
+			<td class="col2">
+				<select id="custom_opentype">
+					<option value="0">silently in background</option>
+					<option value="1">in a new window</option>
+					<option value="2">in a new tab w/ focus</option>
+					<option value="3">in a new tab w/o focus</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr class="custom">
+			<td colspan=2>&nbsp;</td>
+		</tr>
+
+<!--
+		<tr>
+			<td>When number has country code:</td>
+			<td class="col2">
+			  <select id="dialcc">
+					<option value="0">open menu</option>
+					<option value="1">dial directly</option>
+			  </select>
+			</td>
+		</tr>
+-->
+<!--
+		<tr>
+			<td>When number has no country code:</td>
+			<td class="col2">
+			  <select id="dialwocc">
+					<option value="0">open menu</option>
+					<option value="1">dial directly</option>
+			  </select>
+			</td>
+		</tr>
+-->
+
+		<tr>
+			<td>Rewrite other VoIP URLs:</td>
+			<td class="col2">
+			  <select id="rewrite_voip_urls">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			  </select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Reparse dynamic web pages:</td>
+			<td class="col2">
+			  <select id="reparse_dynamic">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			  </select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Text highlighting:</td>
+			<td class="col2">
+			  <select id="highlight">
+					<option value="0">None</option>
+					<option value="25">Light</option>
+					<option value="50">Medium</option>
+					<option value="100">Strong</option>
+			  </select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Number of recent country codes:</td>
+			<td class="col2">
+				<select id="num_history">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Replace '+' with</td>
+			<td class="col2">
+				<select id="idd_prefix">
+					<option value=""></option>
+					<option value="00">00</option>
+					<option value="001">001</option>
+					<option value="011">011</option>
+					<option value="0011">0011</option>
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td>Suppress own country code:</td>
+			<td class="col2">
+				<input type="text" id="suppress_cc">
+			</td>
+		</tr>
+
+		<tr>
+			<td>Send anonymous usage statistics:</td>
+			<td class="col2">
+			  <select id="use_analytics">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+			  </select>
+			</td>
+		</tr>
+
+		<tr>
+			<td style="font-size:5px">&nbsp;</td>
+			<td></td>
+		</tr>
+
+		<tr id="footer">
+			<td id="statuspane">
+				<div id="status"></div>
+			</td>
+			<td id="buttonpane">
+				<button id="btn_save">Save</button>&nbsp;
+				<button id="btn_cancel">Cancel</button>&nbsp;
+				<button id="btn_apply">Apply</button>
+			</td>
+		</tr>
+
+	</table>
+
+  <script src="helper.js"></script>
+  <script src="pref.js"></script>
+  <script src="util.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
+

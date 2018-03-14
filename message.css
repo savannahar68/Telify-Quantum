@@ -1,0 +1,108 @@
+
+/* --- */
+
+div#telifyMessageBox div#telifyMessageBoxDialog {
+	padding: 8px 12px 0 12px;
+	margin: 0;
+	background-color: #f0f0f0;
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 150%;
+}
+
+div#telifyMessageBox div#telifyMessageBoxDialog table {
+	width: 100%;
+	margin: 0;
+	border: 0;
+	border-collapse: collapse;
+}
+
+div#telifyMessageBox td.col1 {
+	width: 64px;
+	text-align: left;
+	border: 0;
+}
+
+div#telifyMessageBox td.col1 img {
+	margin: 0;
+	padding: 0 16px 0 0;
+}
+
+div#telifyMessageBox td.col2 {
+	vertical-align: top;
+	max-width: 480px;
+	text-align: justify;
+	hyphens: auto;
+	color: black;
+	font-size: 14px;
+	font-family: Verdana, sans-serif;
+	border: 0;
+}
+
+div#telifyMessageBox td.col2 span {
+	text-align: justify;
+	hyphens: auto;
+	color: black;
+	font-size: 14px;
+	font-family: Verdana, sans-serif;
+}
+
+
+div#telifyMessageBox div#buttonset {
+	text-align: right;
+}
+
+div#telifyMessageBox div#buttonset a {
+	margin: 0.5em 0 0.8em 0.5em;
+}
+
+
+
+div#telifyMessageBox .ui-dialog .ui-dialog-buttonpane {
+	border-color: #c8c8c8;
+}
+
+div#telifyMessageBox .ui-widget-header {
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	color: rgb(51, 51, 51);
+	font-weight: bold;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(221, 221, 221);
+	background: rgb(233, 233, 233);
+  font-size: 16px;
+}
+
+div#telifyMessageBox .ui-widget-content {
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    color: rgb(51, 51, 51);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    background: rgb(255, 255, 255);
+}
+
+div#telifyMessageBox .ui-button .ui-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/jquery/images/ui-icons_777777_256x240.png");
+}
+
+div#telifyMessageBox .ui-state-hover .ui-icon,
+div#telifyMessageBox .ui-state-focus .ui-icon,
+div#telifyMessageBox .ui-button:hover .ui-icon,
+div#telifyMessageBox .ui-button:focus .ui-icon,
+div#telifyMessageBox .ui-state-default .ui-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/jquery/images/ui-icons_555555_256x240.png");
+}
+
+div#telifyMessageBox .ui-widget {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}

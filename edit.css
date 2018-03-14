@@ -1,0 +1,213 @@
+
+/* --- */
+
+div#telifyEditNumber div#telifyEditNumberDialog {
+	padding: 8px 8px 0 8px;
+	margin: 0;
+	background-color: #f0f0f0;
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+	line-height: 150%;
+}
+
+div#telifyEditNumber div#telifyEditNumberDialog table {
+	width: 100%;
+	margin: 0;
+	border: 0;
+	border-collapse: collapse;
+}
+
+div#telifyEditNumber div#telifyEditNumberDialog table td {
+	height: auto;
+}
+
+div#telifyEditNumber div.telify_codepane {
+	height: 240px;
+	overflow-y: scroll;
+	margin-top: 4px;
+}
+
+div#telifyEditNumber table.telify_codetable {
+	background-color: white;
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+}
+
+div#telifyEditNumber table.telify_codetable tr {
+	cursor: pointer;
+	border: 0;
+}
+
+div#telifyEditNumber table.telify_codetable tr:hover {
+	background-color: #cdc;
+}
+
+div#telifyEditNumber tr#telify_editline {
+}
+
+div#telifyEditNumber tr#telify_sep td {
+	font-size: inherit;
+	line-height: 80%;
+	padding: 0;
+	border: 0;
+	margin: 0;
+	height: auto;
+}
+
+div#telifyEditNumber tr#telify_header {
+	font-weight: bold;
+	background-color: #ccc;
+	height: auto;
+}
+
+div#telifyEditNumber tr#telify_header td {
+	font-weight: bold;
+	background-color: #ccc;
+	height: auto;
+}
+
+div#telifyEditNumber tr#telify_editline td, tr#telify_header td {
+	padding: 2px 0;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+	font-weight: bold;
+  color: #101010;
+  vertical-align: middle;
+  line-height: 1.4em;
+  text-align: left;
+  border: 0;
+}
+
+div#telifyEditNumber input[type="text"] {
+  background-color: white;
+  padding: 1px 2px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ccc;
+  border-radius: 3px;
+  margin: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+	font-weight: normal;
+  color: #101010;
+  vertical-align: middle;
+  height: auto;
+  box-shadow: none;
+}
+
+div#telifyEditNumber input[type="text"]:focus {
+	outline-offset: -2px;
+	outline: -webkit-focus-ring-color auto 5px;
+	background-color: #ffffe0;
+}
+
+div#telifyEditNumber table.telify_codetable td {
+	padding: 0;
+  font-family: Verdana, sans-serif;
+  font-size: 14px;
+	font-weight: normal;
+  color: #101010;
+  vertical-align: middle;
+  height: auto;
+	border: 0;
+}
+
+div#telifyEditNumber td.telify_col1 {
+	width: 35px;
+	min-width: 35px;
+}
+
+div#telifyEditNumber td.telify_col2 {
+	width: 62px;
+	min-width: 62px;
+	white-space: nowrap;
+}
+
+div#telifyEditNumber td.telify_col3 {
+	white-space: nowrap;
+}
+
+div#telifyEditNumber td img {
+	vertical-align: text-bottom;
+}
+
+div#telifyEditNumber input.telify_cc {
+	width: 48px;
+}
+
+div#telifyEditNumber input.telify_nr {
+	width: 120px;
+}
+
+
+div#telifyEditNumber div#telify_buttonset {
+	text-align: right;
+}
+
+div#telifyEditNumber div#telify_buttonset a {
+	margin: 0.5em 0 0.8em 0.5em;
+}
+
+
+div#telifyEditNumber .ui-dialog {
+	padding: 0;
+}
+
+div#telifyEditNumber .ui-dialog .ui-dialog-title {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  line-height: 16px;
+  color: black;
+}
+
+div#telifyEditNumber .ui-dialog .ui-dialog-buttonpane {
+	border-color: #c8c8c8;
+}
+
+div#telifyEditNumber .ui-widget-header {
+	border-image-source: initial;
+	border-image-slice: initial;
+	border-image-width: initial;
+	border-image-outset: initial;
+	border-image-repeat: initial;
+	color: rgb(51, 51, 51);
+	font-weight: bold;
+	border-width: 1px;
+	border-style: solid;
+	border-color: rgb(221, 221, 221);
+	background: rgb(233, 233, 233);
+  font-size: 16px;
+}
+
+div#telifyEditNumber .ui-widget-content {
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    color: rgb(51, 51, 51);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(221, 221, 221);
+    background: rgb(255, 255, 255);
+}
+
+div#telifyEditNumber .ui-button .ui-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/jquery/images/ui-icons_777777_256x240.png");
+}
+
+div#telifyEditNumber .ui-state-hover .ui-icon,
+div#telifyEditNumber .ui-state-focus .ui-icon,
+div#telifyEditNumber .ui-button:hover .ui-icon,
+div#telifyEditNumber .ui-button:focus .ui-icon,
+div#telifyEditNumber .ui-state-default .ui-icon {
+    background-image: url("chrome-extension://__MSG_@@extension_id__/jquery/images/ui-icons_555555_256x240.png");
+}
+
+div#telifyEditNumber .ui-dialog .no-close .ui-dialog-titlebar-close,
+div#telifyEditNumber .ui-dialog .ui-dialog-titlebar {
+	display: block;
+	height: auto;
+}
+
